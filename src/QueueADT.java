@@ -1,8 +1,8 @@
 
-public interface QueueADT {
+public interface QueueADT<T> {
 	public int size();
 	public boolean isEmpty();
-	public Object front() throws QueueException;
-	public Object dequeue() throws QueueException;
-	public void enqueue(Object e);
+	public T front() throws QueueException;
+	public T dequeue() throws QueueException;
+	public void enqueue(T e) throws QueueException;
 }

@@ -1,7 +1,7 @@
 /*
- * Queue implementation with an array.
+ * Implementation of Queue ADT using an array.
  */
-public class Queue implements QueueADT {
+public class Queue<T> implements QueueADT<T> {
 	private int f; // front of queue
 	private int r; // rear of queue
 	private int capacity;
@@ -26,22 +26,24 @@ public class Queue implements QueueADT {
         return (f==r);
     }
 
-    public Object front() throws QueueException {
+    @SuppressWarnings("unchecked")
+    public T front() throws QueueException {
         if (isEmpty())
            throw new QueueException("Queue is empty.");
-        return Q[f];
+        return (T) Q[f];
      }
 
-    public Object dequeue() throws QueueException {
+    @SuppressWarnings("unchecked")
+    public T dequeue() throws QueueException {
         if (isEmpty())
           throw new QueueException("Queue is empty.");
         Object tmp = Q[f];
         Q[f] = null;
         f = (f+1) % capacity;
-        return tmp;
+        return (T) tmp;
     }
     
-    public void enqueue(Object e) throws QueueException {
+    public void enqueue(T e) throws QueueException {
         if (size() == Q.length - 1)
           throw new QueueException("Queue is full.");
         Q[r] = e;
