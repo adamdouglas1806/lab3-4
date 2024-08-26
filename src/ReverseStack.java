@@ -12,8 +12,9 @@ public class ReverseStack {
 	 * 
 	 * @param st the stack to be reversed
 	 */
-	public static void reverseStack(Stack st){
-
+	public static <T> void reverseStack(Stack<T> st){
+		Queue<T> q = new Queue<T>(st.size()+1);
+		// TODO complete this implementation
 	}
 	
 	

@@ -14,9 +14,9 @@ public class ReverseStackTest {
 		st.push("B");
 		st.push("C");
 		ReverseStack.reverseStack(st);
-		assertEquals("A",(String) st.pop());
-		assertEquals("B",(String) st.pop());
-		assertEquals("C",(String) st.pop());
+		assertEquals("A", st.pop());
+		assertEquals("B", st.pop());
+		assertEquals("C", st.pop());
 	}
 	
 	@Test
