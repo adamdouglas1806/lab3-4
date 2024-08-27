@@ -37,5 +37,16 @@ public class ReverseStackTest {
 		assertEquals(Integer.valueOf(3), st.pop());
 	}
 
+	@Test
+	public void reverseStackBooleansTest() {
+		Stack<Boolean> st = new Stack<Boolean>(5);
+		st.push(true);
+		st.push(false);
+		st.push(false);
+		ReverseStack.reverseStack(st);
+		assertEquals(true, st.pop());
+		assertEquals(false, st.pop());
+		assertEquals(false, st.pop());
+	}
 
 }
