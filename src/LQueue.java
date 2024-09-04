@@ -39,6 +39,8 @@ public class LQueue implements QueueADT {
 	 * TODO Where N is the number of elements in the queue the complexity is:
 	 *
 	 * O(?)
+	 * 
+	 * Because: TODO
 	 */
 	public boolean isEmpty(){
 		return false; // dummy value
@@ -51,6 +53,8 @@ public class LQueue implements QueueADT {
 	 * TODO Where N is the number of elements in the queue the complexity is:
 	 *
 	 * O(?)
+	 * 
+	 * Because: TODO
 	 */
 	public int size(){
 		return -1; // dummy value 
@@ -63,6 +67,8 @@ public class LQueue implements QueueADT {
 	 * TODO Where N is the number of elements in the queue the complexity is:
 	 *
 	 * O(?)
+	 * 
+	 * Because: TODO
 	 */
 	public void enqueue(Object o) {
 
@@ -75,6 +81,8 @@ public class LQueue implements QueueADT {
 	 * TODO Where N is the number of elements in the queue the complexity is:
 	 *
 	 * O(?)
+	 * 
+	 * Because: TODO
 	 */
 	public Object dequeue() throws QueueException{
 		return null; // dummy value
@@ -87,6 +95,8 @@ public class LQueue implements QueueADT {
 	 * TODO Where N is the number of elements in the queue the complexity is:
 	 *
 	 * O(?)
+	 * 
+	 * Because: TODO
 	 */
 	public Object front() throws QueueException{
 		return null; // dummy value
