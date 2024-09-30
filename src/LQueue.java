@@ -1,7 +1,7 @@
 /*
  * Queue implementation with a linked list.
  */
-public class LQueue implements QueueADT {
+public class LQueue {
 	
 	private class Node{
 		Object element;
