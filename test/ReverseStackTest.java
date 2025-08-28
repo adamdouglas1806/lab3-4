@@ -13,10 +13,15 @@ public class ReverseStackTest {
 		st.push("A");
 		st.push("B");
 		st.push("C");
+		st.push("D");
+		st.push("E");
 		ReverseStack.reverseStack(st);
 		assertEquals("A", st.pop());
 		assertEquals("B", st.pop());
 		assertEquals("C", st.pop());
+		assertEquals("D", st.pop());
+		assertEquals("E", st.pop());
+		
 	}
 	
 	@Test
@@ -31,20 +36,28 @@ public class ReverseStackTest {
 		st.push(1);
 		st.push(2);
 		st.push(3);
+		st.push(4);
+		st.push(5);
 		ReverseStack.reverseStack(st);
 		assertEquals(Integer.valueOf(1), st.pop());
 		assertEquals(Integer.valueOf(2), st.pop());
 		assertEquals(Integer.valueOf(3), st.pop());
+		assertEquals(Integer.valueOf(4), st.pop());
+		assertEquals(Integer.valueOf(5), st.pop());
 	}
 
 	@Test
 	public void reverseStackBooleansTest() {
 		Stack<Boolean> st = new Stack<Boolean>(5);
 		st.push(true);
+		st.push(true);
+		st.push(false);
 		st.push(false);
 		st.push(false);
 		ReverseStack.reverseStack(st);
 		assertEquals(true, st.pop());
+		assertEquals(true, st.pop());
+		assertEquals(false, st.pop());
 		assertEquals(false, st.pop());
 		assertEquals(false, st.pop());
 	}
