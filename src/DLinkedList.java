@@ -1,3 +1,9 @@
+class LinkedListException extends RuntimeException{    
+	public LinkedListException(String err) {
+		super(err);
+	}
+}
+
 public class DLinkedList {
 
 	private class Node {
@@ -82,12 +88,10 @@ public class DLinkedList {
 		}
 	}
 		
-	public Object deleteAtHead() {
+	public Object removeAtHead() throws LinkedListException {
 		// list is empty 
 		if(headNode == null){
-			headNode = null;
-			tailNode = null;
-			return null;
+			throw new LinkedListException("List is empty");
 		}
 		// singleton: must update tailnode too
 		if(headNode == tailNode){
@@ -103,12 +107,10 @@ public class DLinkedList {
 		return res;
 	}
 
-	public Object deleteAtTail() {
+	public Object removeAtTail() throws LinkedListException {
 		// list is empty 
 		if(tailNode == null){
-			headNode = null;
-			tailNode = null;
-			return null;
+			throw new LinkedListException("List is empty");
 		}
 		// singleton: must update tailnode too
 		if(headNode == tailNode){

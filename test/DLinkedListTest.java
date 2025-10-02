@@ -35,7 +35,7 @@ public class DLinkedListTest {
 	@Test
 	public void testDeleteAtHeadOne() {
 		dll.addAtTail("A");
-		dll.deleteAtHead();
+		dll.removeAtHead();
 		assertNull(dll.getHeadValue());
 		assertNull(dll.getTailValue());
 	}
@@ -45,8 +45,8 @@ public class DLinkedListTest {
 		dll.addAtHead("A");	
 		dll.addAtHead("B");
 		
-		assertEquals("B",(String) dll.deleteAtHead());
-		assertEquals("A",(String) dll.deleteAtHead());		
+		assertEquals("B",(String) dll.removeAtHead());
+		assertEquals("A",(String) dll.removeAtHead());		
 	}
 
 	@Test
@@ -55,8 +55,8 @@ public class DLinkedListTest {
 		dll.addAtHead("A");
 		assertEquals("A",(String) dll.getHeadValue());
 		assertEquals("B",(String) dll.getTailValue());
-		assertEquals("B",(String) dll.deleteAtTail());
-		assertEquals("A",(String) dll.deleteAtTail());
+		assertEquals("B",(String) dll.removeAtTail());
+		assertEquals("A",(String) dll.removeAtTail());
 		assertNull(dll.getHeadValue());
 		assertNull(dll.getTailValue());
 		//assertEquals("A",(String) dll.deleteAtTail());	
@@ -94,10 +94,10 @@ public class DLinkedListTest {
 		dll.addAtHead("B");
 		dll.addAtHead("A");
 		dll.reverse();
-		assertEquals("D",(String) dll.deleteAtHead());
-		assertEquals("C",(String) dll.deleteAtHead());
-		assertEquals("B",(String) dll.deleteAtHead());
-		assertEquals("A",(String) dll.deleteAtHead());
+		assertEquals("D",(String) dll.removeAtHead());
+		assertEquals("C",(String) dll.removeAtHead());
+		assertEquals("B",(String) dll.removeAtHead());
+		assertEquals("A",(String) dll.removeAtHead());
 		assertNull(dll.getHeadValue());
 		assertNull(dll.getTailValue());
 	}
@@ -116,5 +116,15 @@ public class DLinkedListTest {
 		{
 			assertEquals(arr[i], dll.get(i));
 		}
+	}
+	
+	@Test(expected=LinkedListException.class)
+	public void testDeleteAtHeadEmpty() {
+		dll.removeAtHead();
+	}
+	
+	@Test(expected=LinkedListException.class)
+	public void testDeleteAtTailEmpty() {
+		dll.removeAtTail();
 	}
 }
