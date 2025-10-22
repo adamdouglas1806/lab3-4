@@ -149,7 +149,36 @@ public class DLinkedList {
 	
 	// Part 4: complete
 	public void reverse(){
-
+		
+		Node currentNode = headNode;
+		//Creating a new node which will represent the current Node and will be used to go through and reverse the list.
+		Node tempNode = null;
+		//Creating a temp value to briefly store data later.
+		Node tempHeadNode = headNode;
+		//Creating a temp value to briefly store the headNode.
+		
+		while(currentNode != null) {
+			//While loop will repeat until every node in the list has been reversed.
+			tempNode = currentNode.prevNode;
+			//The temp value will be used to briefly hold the value of the previous node from the current node. 
+			currentNode.prevNode = currentNode.nextNode;
+			//Changing the previous node of the current node to the next node from the current node.
+			currentNode.nextNode = tempNode;
+			//Using the temp value to change the next node from the current node to the previous node of the current node before the value changed.
+			
+			currentNode = currentNode.prevNode;
+			//Is used to go to the next node in the list.
+			
+		}
+		
+		if (tempNode != null) {
+			//Checks if the list is not empty.
+			headNode = tailNode;
+			tailNode = tempHeadNode;
+			//Since the list is reversed we need to swap the head and the tail around.
+		}
+		
+		
 	}	
 
 }
