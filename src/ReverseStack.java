@@ -6,11 +6,12 @@ public class ReverseStack {
 	 */
 	/** Reverses the order of elements in the given stack
 	 * 
-	 * TODO Where N is the number of elements in the stack the complexity is:
+	 * Where N is the number of elements in the stack the complexity is:
 	 *
-	 * O(?)
+	 * O(N)
 	 * 
-	 * Because: TODO
+	 * Because: The amount of elements in the list will affect the time the code will take to reverse the elements (a list with two elements will compile faster
+	 * than a list with 12 elements).
 	 * 
 	 * @param st the stack to be reversed
 	 */
