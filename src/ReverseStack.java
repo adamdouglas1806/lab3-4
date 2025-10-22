@@ -16,7 +16,20 @@ public class ReverseStack {
 	 */
 	public static <T> void reverseStack(Stack<T> st){
 		Queue<T> q = new Queue<T>(st.size()+1);
-		// TODO complete this implementation
+		
+		while(!st.isEmpty()) {
+		//Will ensure that every element will be transfered to the queue and prevent empty list errors.
+			q.enqueue(st.pop());
+			//Moving the values in the stack to the queue q, the elements will be placed into the queue in a reverse order.
+		}
+
+		while(!q.isEmpty()) {
+		//Will ensure that every element will be transfered to the stack and prevent empty list errors.
+			st.push(q.dequeue());
+			//Move the values back into the now empty stack but this time they are in a reversed order.
+			}
+		
+		
 	}
 	
 	
